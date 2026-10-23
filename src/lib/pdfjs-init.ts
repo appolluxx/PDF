@@ -22,6 +22,7 @@ export async function loadPdfDocument(source: ArrayBuffer | Uint8Array | File) {
     data: new Uint8Array(data),
     cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@' + pdfjsLib.version + '/cmaps/',
     cMapPacked: true,
+    standardFontDataUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@' + pdfjsLib.version + '/standard_fonts/',
   });
 
   return await loadingTask.promise;
